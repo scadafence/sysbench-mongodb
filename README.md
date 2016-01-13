@@ -8,7 +8,7 @@ Requirements
 =====================
 
 * Java 1.8
-* The MongoDB Java driver must exist and be in the CLASSPATH, as in "export CLASSPATH=/home/tcallaghan/java_goodies/mongo-2.13.0.jar:.". If you don't already have the MongoDB Java driver, then execute the following two commands:
+* The MongoDB Java driver must exist and be in the CLASSPATH, as in "export CLASSPATH=/home/Percona-Lab/java_goodies/mongo-java-driver-3.2.1.jar:.". If you don't already have the MongoDB Java driver, then execute the following two commands:
     * wget https://oss.sonatype.org/content/repositories/releases/org/mongodb/mongo-java-driver/3.2.1/mongo-java-driver-3.2.1.jar
     * export CLASSPATH=$PWD/mongo-java-driver-3.2.1.jar:$CLASSPATH
 * This example assumes that you already have a MongoDB or Percona Server for MongoDB server running on the same machine as the Sysbench client application.
