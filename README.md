@@ -1,17 +1,17 @@
 sysbench-mongodb
 ================
 
-Sysbench for MongoDB and TokuMX
+Sysbench for MongoDB and Percona Server for MongoDB
 
 
 Requirements
 =====================
 
-* Java 1.6 or 1.7
+* Java 1.8
 * The MongoDB Java driver must exist and be in the CLASSPATH, as in "export CLASSPATH=/home/tcallaghan/java_goodies/mongo-2.13.0.jar:.". If you don't already have the MongoDB Java driver, then execute the following two commands:
-    * wget https://repo1.maven.org/maven2/org/mongodb/mongo-java-driver/2.13.0/mongo-java-driver-2.13.0.jar
-    * export CLASSPATH=$PWD/mongo-java-driver-2.13.0.jar:$CLASSPATH
-* This example assumes that you already have a MongoDB or TokuMX server running on the same machine as the Sysbench client application.
+    * wget https://oss.sonatype.org/content/repositories/releases/org/mongodb/mongo-java-driver/3.2.1/mongo-java-driver-3.2.1.jar
+    * export CLASSPATH=$PWD/mongo-java-driver-3.2.1.jar:$CLASSPATH
+* This example assumes that you already have a MongoDB or Percona Server for MongoDB server running on the same machine as the Sysbench client application.
 * You can connect a different server or port by editing the config.bash script.
 
 
@@ -23,7 +23,7 @@ In the default configuration the benchmark creates 16 collections, each with 10 
 To run:
 
 ```bash
-git clone https://github.com/tmcallaghan/sysbench-mongodb.git
+git clone https://github.com/Percona-Lab/sysbench-mongodb.git
 cd sysbench-mongodb
 
 ```
