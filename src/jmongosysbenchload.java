@@ -75,7 +75,7 @@ public class jmongosysbenchload {
             myWC = WriteConcern.FSYNC_SAFE;
         }
         else if ((myWriteConcern.toLowerCase().equals("none"))) {
-            myWC = WriteConcern.NONE;
+            myWC = WriteConcern.UNACKNOWLEDGED;
         }
         else if ((myWriteConcern.toLowerCase().equals("normal"))) {
             myWC = WriteConcern.NORMAL;
