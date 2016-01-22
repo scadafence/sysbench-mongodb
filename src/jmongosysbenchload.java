@@ -284,7 +284,7 @@ public class jmongosysbenchload {
 
             logMe("Writer thread %d : creating collection %s secondary index",threadNumber, collectionName);
 
-            coll.ensureIndex(new BasicDBObject("k", 1), idxOptions);
+            coll.createIndex(new BasicDBObject("k", 1), idxOptions);
 
             long numInserts = 0;
             int id = 0;

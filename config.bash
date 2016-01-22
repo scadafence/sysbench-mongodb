@@ -117,3 +117,6 @@ export SYSBENCH_NON_INDEX_UPDATES=1
 # number of delete/insert operations per sysbench "transaction"
 #   valid values : integer >= 0
 export SYSBENCH_INSERTS=1
+
+# drop collections when test completes?
+export DROP_COLLECTIONS=TRUE
