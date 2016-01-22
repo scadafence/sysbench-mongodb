@@ -120,3 +120,6 @@ export SYSBENCH_INSERTS=1
 
 # drop collections when test completes?
 export DROP_COLLECTIONS=TRUE
+
+# this allows benchmark wrappers to create a simpler file with only the changed parameters, like threads
+[ -f config.bash.custom ] && . config.bash.custom

@@ -46,8 +46,9 @@ fi
 
 if [[ $DOQUERY = "yes" ]]; then
     echo Do query at $( date )
-    export LOG_NAME=mongoSysbenchExecute-${NUM_COLLECTIONS}-${NUM_DOCUMENTS_PER_COLLECTION}-${NUM_WRITER_THREADS}.txt
-    export BENCHMARK_TSV=${LOG_NAME}.tsv
+    workload=default
+    [ -n "$SYSBENCH_WORKLOAD" ] && workload=$SYSBENCH_WORKLOAD
+    export LOG_NAME=mongoSysbenchLoad-${workload}-${NUM_COLLECTIONS}-${NUM_DOCUMENTS_PER_COLLECTION}-${NUM_LOADER_THREADS}.txt    
  
     rm -f $LOG_NAME
     rm -f $BENCHMARK_TSV
