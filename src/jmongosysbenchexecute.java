@@ -66,17 +66,18 @@ public class jmongosysbenchexecute {
     public static int allDone = 0;
 
     public static long rngSeed = 0;
+    public static boolean dropCollections = false;
     
     public jmongosysbenchexecute() {
     }
 
     public static void main (String[] args) throws Exception {
-        if (args.length != 24) {
+        if (args.length != 25) {
             logMe("*** ERROR : CONFIGURATION ISSUE ***");
             logMe("jsysbenchexecute [number of collections] [database name] [number of writer threads] [documents per collection] [seconds feedback] "+
                                    "[log file name] [auto commit Y/N] [runtime (seconds)] [range size] [point selects] "+
                                    "[simple ranges] [sum ranges] [order ranges] [distinct ranges] [index updates] [non index updates] [inserts] [writeconcern] "+
-                                   "[max tps] [server] [port] [seed] [username] [password]");
+                                   "[max tps] [server] [port] [seed] [username] [password] [dropCollections]");
             System.exit(1);
         }
         
@@ -104,6 +105,7 @@ public class jmongosysbenchexecute {
         rngSeed = Long.valueOf(args[21]);
         userName = args[22];
         passWord = args[23];
+	dropCollections = Boolean.valueOf(args[24]);
 
         maxThreadTPS = (maxTPS / writerThreads) + 1;
 
@@ -231,8 +233,15 @@ public class jmongosysbenchexecute {
             e.printStackTrace();
         }
 
-        m.close();
+        if(dropCollections) {
+	    logMe("Dropping collections");
+	    for (int i=1; i<=numCollections; i++) {
+		DBCollection col = db.getCollection("sbtest"+i);
+		col.drop();
+	    }
+	}
 
+	m.close();
         logMe("Done!");
     }
 
@@ -286,7 +295,7 @@ public class jmongosysbenchexecute {
 
                 // if TokuMX, lock onto current connection (do not pool)
                 if (bIsTokuMX && !auto_commit) {
-                    db.requestStart();
+                    //db.requestStart();
                     db.command("beginTransaction");
                 }
 
@@ -296,7 +305,7 @@ public class jmongosysbenchexecute {
                 try {
                     if (bIsTokuMX && !auto_commit) {
                         // make sure a connection is available, given that we are not pooling
-                        db.requestEnsureConnection();
+                        //db.requestEnsureConnection();
                     }
 
                     for (int i=1; i <= oltpPointSelects; i++) {
@@ -487,7 +496,7 @@ public class jmongosysbenchexecute {
                         // commit the transaction and release current connection in the pool
                         db.command("commitTransaction");
                         //--db.command("rollbackTransaction")
-                        db.requestDone();
+                        //db.requestDone();
                     }
                 }
             }
