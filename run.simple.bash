@@ -25,10 +25,12 @@ javac -cp $CLASSPATH:$PWD/src src/jmongosysbenchexecute.java
 
 
 # load the data
+workload=default
 
 if [[ $DOLOAD = "yes" ]]; then
     echo Do load at $( date )
-    export LOG_NAME=mongoSysbenchLoad-${NUM_COLLECTIONS}-${NUM_DOCUMENTS_PER_COLLECTION}-${NUM_LOADER_THREADS}.txt
+    [ -n "$SYSBENCH_WORKLOAD" ] && workload=$SYSBENCH_WORKLOAD
+    export LOG_NAME=mongoSysbenchLoad-${workload}-${NUM_COLLECTIONS}-${NUM_DOCUMENTS_PER_COLLECTION}-${NUM_LOADER_THREADS}.txt    
     export BENCHMARK_TSV=${LOG_NAME}.tsv
  
     rm -f $LOG_NAME
@@ -46,9 +48,8 @@ fi
 
 if [[ $DOQUERY = "yes" ]]; then
     echo Do query at $( date )
-    workload=default
     [ -n "$SYSBENCH_WORKLOAD" ] && workload=$SYSBENCH_WORKLOAD
-    export LOG_NAME=mongoSysbenchLoad-${workload}-${NUM_COLLECTIONS}-${NUM_DOCUMENTS_PER_COLLECTION}-${NUM_LOADER_THREADS}.txt    
+    export LOG_NAME=mongoSysbenchExecute-${workload}-${NUM_COLLECTIONS}-${NUM_DOCUMENTS_PER_COLLECTION}-${NUM_LOADER_THREADS}.txt    
  
     rm -f $LOG_NAME
     rm -f $BENCHMARK_TSV
