@@ -1,0 +1,694 @@
+Script started on 2019-08-21 12:43:48+0300
+]0;sf@perflab2: ~/sysbench-mongodbsf@perflab2:~/sysbench-mongodb [master]
+$ ./run.simple.bash sf-config.bash 
+Loading config from sf-config.bash.....
+Note: src/jmongosysbenchload.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: src/jmongosysbenchexecute.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Do load at Wed Aug 21 12:43:55 IDT 2019
+Thread[main,5,main]Application Parameters
+Thread[main,5,main]--------------------------------------------------
+Thread[main,5,main]  16 collections
+Thread[main,5,main]  database name = sbtest
+Thread[main,5,main]  8 writer thread(s)
+Thread[main,5,main]  10,000,000 documents per collection
+Thread[main,5,main]  Documents Per Insert = 1000
+Thread[main,5,main]  Feedback every 10 seconds(s)
+Thread[main,5,main]  Feedback every -1 inserts(s)
+Thread[main,5,main]  logging to file mongoSysbenchLoad-default-16-10000000-8-64.txt.tsv
+Thread[main,5,main]  write concern = SAFE
+Thread[main,5,main]  Server:Port = mongodb:27017
+Thread[main,5,main]  Username = none
+Aug 21, 2019 12:43:55 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[mongodb:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+Thread[main,5,main]mongoOptions | MongoOptions{description='null', connectionsPerHost=100, threadsAllowedToBlockForConnectionMultiplier=5, maxWaitTime=120000, connectTimeout=10000, socketTimeout=0, socketKeepAlive=true, readPreference=primary, dbDecoderFactory=com.mongodb.DefaultDBDecoder$1@32464a14, dbEncoderFactory=com.mongodb.DefaultDBEncoder$1@4e4aea35, safe=false, w=0, wtimeout=0, fsync=false, j=false, socketFactory=javax.net.DefaultSocketFactory@1442d7b5, cursorFinalizerEnabled=false, writeConcern=WriteConcern{w=null, wTimeout=null ms, fsync=null, journal=null, alwaysUseMBeans=false, requiredReplicaSetName=null}
+Thread[main,5,main]mongoWriteConcern | WriteConcern{w=null, wTimeout=null ms, fsync=null, journal=null
+Aug 21, 2019 12:43:55 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster description not yet available. Waiting for 30000 ms before timing out
+Aug 21, 2019 12:43:55 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:1, serverValue:5}] to mongodb:27017
+Aug 21, 2019 12:43:55 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=mongodb:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 12]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1521400}
+Aug 21, 2019 12:43:55 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:2, serverValue:6}] to mongodb:27017
+Thread[main,5,main]  index technology = mongo
+Thread[main,5,main]--------------------------------------------------
+Thread[Thread-1,5,main]Writer thread 0 : creating collection sbtest1
+Thread[Thread-2,5,main]Writer thread 1 : creating collection sbtest2
+Thread[Thread-3,5,main]Writer thread 2 : creating collection sbtest3
+Thread[Thread-4,5,main]Writer thread 3 : creating collection sbtest4
+Thread[Thread-5,5,main]Writer thread 4 : creating collection sbtest5
+Thread[Thread-6,5,main]Writer thread 5 : creating collection sbtest6
+Thread[main,5,main]  collection 9 is waiting for an available loader slot
+Thread[Thread-7,5,main]Writer thread 6 : creating collection sbtest7
+Thread[Thread-8,5,main]Writer thread 7 : creating collection sbtest8
+Thread[Thread-5,5,main]Writer thread 4 : creating collection sbtest5 secondary index
+Thread[Thread-7,5,main]Writer thread 6 : creating collection sbtest7 secondary index
+Thread[Thread-4,5,main]Writer thread 3 : creating collection sbtest4 secondary index
+Thread[Thread-6,5,main]Writer thread 5 : creating collection sbtest6 secondary index
+Thread[Thread-3,5,main]Writer thread 2 : creating collection sbtest3 secondary index
+Thread[Thread-2,5,main]Writer thread 1 : creating collection sbtest2 secondary index
+Thread[Thread-8,5,main]Writer thread 7 : creating collection sbtest8 secondary index
+Thread[Thread-1,5,main]Writer thread 0 : creating collection sbtest1 secondary index
+Aug 21, 2019 12:43:55 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:4, serverValue:13}] to mongodb:27017
+Aug 21, 2019 12:43:55 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:5, serverValue:11}] to mongodb:27017
+Aug 21, 2019 12:43:55 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:8, serverValue:8}] to mongodb:27017
+Aug 21, 2019 12:43:55 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:7, serverValue:9}] to mongodb:27017
+Aug 21, 2019 12:43:55 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:3, serverValue:7}] to mongodb:27017
+Aug 21, 2019 12:43:55 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:9, serverValue:12}] to mongodb:27017
+Aug 21, 2019 12:43:55 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:6, serverValue:10}] to mongodb:27017
+Thread[Thread-6,5,main]Writer thread 5 : started to load collection sbtest6
+Thread[Thread-8,5,main]Writer thread 7 : started to load collection sbtest8
+Thread[Thread-5,5,main]Writer thread 4 : started to load collection sbtest5
+Thread[Thread-2,5,main]Writer thread 1 : started to load collection sbtest2
+Thread[Thread-3,5,main]Writer thread 2 : started to load collection sbtest3
+Thread[Thread-7,5,main]Writer thread 6 : started to load collection sbtest7
+Thread[Thread-4,5,main]Writer thread 3 : started to load collection sbtest4
+Thread[Thread-1,5,main]Writer thread 0 : started to load collection sbtest1
+Thread[Thread-0,5,main]4,483,000 inserts : 10 seconds : cum ips=447,449.85 : int ips=447,449.85
+Thread[Thread-0,5,main]8,055,000 inserts : 20 seconds : cum ips=401,405.29 : int ips=355,493.63
+Thread[Thread-0,5,main]10,874,000 inserts : 30 seconds : cum ips=361,466.61 : int ips=281,449.68
+Thread[Thread-0,5,main]13,913,000 inserts : 40 seconds : cum ips=347,798.92 : int ips=306,350.81
+Thread[Thread-0,5,main]16,714,000 inserts : 50 seconds : cum ips=334,086.23 : int ips=279,373.63
+Thread[Thread-0,5,main]19,170,000 inserts : 60 seconds : cum ips=319,276.51 : int ips=245,281.13
+Thread[Thread-0,5,main]21,242,000 inserts : 70 seconds : cum ips=303,218.90 : int ips=206,930.99
+Thread[Thread-0,5,main]23,281,000 inserts : 80 seconds : cum ips=290,765.35 : int ips=203,635.27
+Thread[Thread-0,5,main]25,207,000 inserts : 90 seconds : cum ips=279,962.68 : int ips=193,198.92
+Thread[Thread-0,5,main]27,365,000 inserts : 100 seconds : cum ips=273,453.11 : int ips=215,047.33
+Thread[Thread-0,5,main]29,015,000 inserts : 110 seconds : cum ips=263,566.67 : int ips=164,769.32
+Thread[Thread-0,5,main]31,055,000 inserts : 120 seconds : cum ips=258,780.88 : int ips=205,665.89
+Thread[Thread-0,5,main]32,642,000 inserts : 130 seconds : cum ips=251,042.10 : int ips=158,367.43
+Thread[Thread-0,5,main]32,642,000 inserts : 140 seconds : cum ips=233,093.87 : int ips=0.00
+Thread[Thread-0,5,main]33,159,000 inserts : 150 seconds : cum ips=220,984.87 : int ips=51,632.88
+Thread[Thread-0,5,main]33,495,000 inserts : 160 seconds : cum ips=209,260.05 : int ips=33,556.38
+Thread[Thread-0,5,main]35,231,000 inserts : 170 seconds : cum ips=207,146.13 : int ips=173,357.30
+Thread[Thread-0,5,main]35,746,000 inserts : 180 seconds : cum ips=198,484.13 : int ips=51,412.60
+Thread[Thread-0,5,main]35,746,000 inserts : 190 seconds : cum ips=188,128.92 : int ips=0.00
+Thread[Thread-0,5,main]37,302,000 inserts : 200 seconds : cum ips=186,481.10 : int ips=155,242.94
+Thread[Thread-0,5,main]39,646,000 inserts : 210 seconds : cum ips=188,725.77 : int ips=233,442.88
+Thread[Thread-0,5,main]41,399,000 inserts : 220 seconds : cum ips=188,173.85 : int ips=176,500.20
+Thread[Thread-0,5,main]42,511,000 inserts : 230 seconds : cum ips=184,792.67 : int ips=110,723.89
+Thread[Thread-0,5,main]43,560,000 inserts : 240 seconds : cum ips=181,440.28 : int ips=104,565.39
+Thread[Thread-0,5,main]45,479,000 inserts : 250 seconds : cum ips=181,908.72 : int ips=193,233.31
+Thread[Thread-0,5,main]46,777,000 inserts : 260 seconds : cum ips=179,890.09 : int ips=129,527.99
+Thread[Thread-0,5,main]47,854,000 inserts : 270 seconds : cum ips=177,206.19 : int ips=107,527.96
+Thread[Thread-0,5,main]48,833,000 inserts : 280 seconds : cum ips=174,361.85 : int ips=97,704.59
+Thread[Thread-0,5,main]48,942,000 inserts : 290 seconds : cum ips=168,718.97 : int ips=10,885.85
+Thread[Thread-0,5,main]49,080,000 inserts : 300 seconds : cum ips=163,576.01 : int ips=13,849.86
+Thread[Thread-0,5,main]50,364,000 inserts : 310 seconds : cum ips=162,428.89 : int ips=128,092.58
+Thread[Thread-0,5,main]50,773,000 inserts : 320 seconds : cum ips=158,644.31 : int ips=41,002.51
+Thread[Thread-0,5,main]51,124,000 inserts : 330 seconds : cum ips=154,903.37 : int ips=35,117.56
+Thread[Thread-0,5,main]52,613,000 inserts : 340 seconds : cum ips=154,711.36 : int ips=148,395.46
+Thread[Thread-0,5,main]53,883,000 inserts : 350 seconds : cum ips=153,913.17 : int ips=126,809.79
+Thread[Thread-0,5,main]55,323,000 inserts : 360 seconds : cum ips=153,652.38 : int ips=144,491.27
+Thread[Thread-0,5,main]56,249,000 inserts : 370 seconds : cum ips=151,995.16 : int ips=92,433.62
+Thread[Thread-0,5,main]57,158,000 inserts : 380 seconds : cum ips=150,382.55 : int ips=90,781.98
+Thread[Thread-0,5,main]58,026,000 inserts : 390 seconds : cum ips=148,768.21 : int ips=87,157.35
+Thread[Thread-0,5,main]58,662,000 inserts : 400 seconds : cum ips=146,633.37 : int ips=63,498.40
+Thread[Thread-0,5,main]59,064,000 inserts : 410 seconds : cum ips=144,033.59 : int ips=40,151.82
+Thread[Thread-0,5,main]60,256,000 inserts : 420 seconds : cum ips=143,460.86 : int ips=119,847.17
+Thread[Thread-0,5,main]60,915,000 inserts : 430 seconds : cum ips=141,652.58 : int ips=65,807.87
+Thread[Thread-0,5,main]61,836,000 inserts : 440 seconds : cum ips=140,521.67 : int ips=91,962.06
+Thread[Thread-0,5,main]62,710,000 inserts : 450 seconds : cum ips=139,338.22 : int ips=87,312.69
+Thread[Thread-0,5,main]63,894,000 inserts : 460 seconds : cum ips=138,878.26 : int ips=118,210.86
+Thread[Thread-0,5,main]64,598,000 inserts : 470 seconds : cum ips=137,413.02 : int ips=70,196.43
+Thread[Thread-0,5,main]65,774,000 inserts : 480 seconds : cum ips=137,024.60 : int ips=118,608.17
+Thread[Thread-0,5,main]66,883,000 inserts : 490 seconds : cum ips=136,488.12 : int ips=110,767.08
+Thread[Thread-0,5,main]67,353,000 inserts : 500 seconds : cum ips=134,694.42 : int ips=46,929.61
+Thread[Thread-0,5,main]67,817,000 inserts : 510 seconds : cum ips=132,959.65 : int ips=46,335.13
+Thread[Thread-0,5,main]68,391,000 inserts : 520 seconds : cum ips=131,520.40 : int ips=57,711.64
+Thread[Thread-0,5,main]68,782,000 inserts : 530 seconds : cum ips=129,768.79 : int ips=38,975.28
+Thread[Thread-0,5,main]69,496,000 inserts : 540 seconds : cum ips=128,685.81 : int ips=71,335.80
+Thread[Thread-0,5,main]69,952,000 inserts : 550 seconds : cum ips=127,162.80 : int ips=45,355.08
+Thread[Thread-0,5,main]70,855,000 inserts : 560 seconds : cum ips=126,509.16 : int ips=90,480.96
+Thread[Thread-0,5,main]71,774,000 inserts : 570 seconds : cum ips=125,910.24 : int ips=92,241.29
+Thread[Thread-0,5,main]72,597,000 inserts : 580 seconds : cum ips=125,156.24 : int ips=82,217.78
+Thread[Thread-0,5,main]72,998,000 inserts : 590 seconds : cum ips=123,711.38 : int ips=40,035.94
+Thread[Thread-0,5,main]73,245,000 inserts : 600 seconds : cum ips=122,059.13 : int ips=24,672.86
+Thread[Thread-0,5,main]73,395,000 inserts : 610 seconds : cum ips=120,301.92 : int ips=14,982.02
+Thread[Thread-0,5,main]73,798,000 inserts : 620 seconds : cum ips=119,015.98 : int ips=40,388.86
+Thread[Thread-0,5,main]74,062,000 inserts : 630 seconds : cum ips=117,557.80 : int ips=26,567.37
+Thread[Thread-0,5,main]74,899,000 inserts : 640 seconds : cum ips=117,015.61 : int ips=83,101.67
+Thread[Thread-0,5,main]75,641,000 inserts : 650 seconds : cum ips=116,355.37 : int ips=74,133.28
+Thread[Thread-0,5,main]76,476,000 inserts : 660 seconds : cum ips=115,870.62 : int ips=84,122.51
+Thread[Thread-0,5,main]77,225,000 inserts : 670 seconds : cum ips=115,256.89 : int ips=74,802.76
+Thread[Thread-0,5,main]77,313,000 inserts : 680 seconds : cum ips=113,689.40 : int ips=8,789.45
+Thread[Thread-0,5,main]77,743,000 inserts : 690 seconds : cum ips=112,663.34 : int ips=42,957.04
+Thread[Thread-0,5,main]78,516,000 inserts : 700 seconds : cum ips=112,152.10 : int ips=77,007.37
+Thread[Thread-0,5,main]79,370,000 inserts : 710 seconds : cum ips=111,773.78 : int ips=85,314.69
+Thread[main,5,main]  collection 11 is waiting for an available loader slot
+Thread[Thread-10,5,main]Writer thread 7 : creating collection sbtest10
+Thread[Thread-9,5,main]Writer thread 2 : creating collection sbtest9
+Thread[Thread-10,5,main]Writer thread 7 : creating collection sbtest10 secondary index
+Thread[Thread-9,5,main]Writer thread 2 : creating collection sbtest9 secondary index
+Thread[Thread-10,5,main]Writer thread 7 : started to load collection sbtest10
+Thread[Thread-9,5,main]Writer thread 2 : started to load collection sbtest9
+Thread[Thread-11,5,main]Writer thread 3 : creating collection sbtest11
+Thread[Thread-11,5,main]Writer thread 3 : creating collection sbtest11 secondary index
+Thread[main,5,main]  collection 13 is waiting for an available loader slot
+Thread[Thread-12,5,main]Writer thread 4 : creating collection sbtest12
+Thread[Thread-12,5,main]Writer thread 4 : creating collection sbtest12 secondary index
+Thread[Thread-0,5,main]79,980,000 inserts : 720 seconds : cum ips=111,080.25 : int ips=61,460.96
+Thread[Thread-11,5,main]Writer thread 3 : started to load collection sbtest11
+Thread[Thread-12,5,main]Writer thread 4 : started to load collection sbtest12
+Thread[Thread-13,5,main]Writer thread 0 : creating collection sbtest13
+Thread[Thread-14,5,main]Writer thread 1 : creating collection sbtest14
+Thread[Thread-15,5,main]Writer thread 5 : creating collection sbtest15
+Thread[Thread-13,5,main]Writer thread 0 : creating collection sbtest13 secondary index
+Thread[Thread-14,5,main]Writer thread 1 : creating collection sbtest14 secondary index
+Thread[Thread-15,5,main]Writer thread 5 : creating collection sbtest15 secondary index
+Thread[Thread-16,5,main]Writer thread 6 : creating collection sbtest16
+Thread[Thread-16,5,main]Writer thread 6 : creating collection sbtest16 secondary index
+Thread[Thread-0,5,main]80,547,000 inserts : 730 seconds : cum ips=110,328.23 : int ips=56,434.76
+Thread[Thread-0,5,main]80,547,000 inserts : 740 seconds : cum ips=108,835.38 : int ips=0.00
+Thread[Thread-0,5,main]80,547,000 inserts : 750 seconds : cum ips=107,382.40 : int ips=0.00
+Thread[Thread-13,5,main]Writer thread 0 : started to load collection sbtest13
+Thread[Thread-15,5,main]Writer thread 5 : started to load collection sbtest15
+Thread[Thread-16,5,main]Writer thread 6 : started to load collection sbtest16
+Thread[Thread-14,5,main]Writer thread 1 : started to load collection sbtest14
+Thread[Thread-0,5,main]83,198,000 inserts : 760 seconds : cum ips=109,469.04 : int ips=267,264.85
+Thread[Thread-0,5,main]87,302,000 inserts : 770 seconds : cum ips=113,373.04 : int ips=409,254.09
+Thread[Thread-0,5,main]89,675,000 inserts : 780 seconds : cum ips=114,957.93 : int ips=236,684.62
+Thread[Thread-0,5,main]92,177,000 inserts : 790 seconds : cum ips=116,666.01 : int ips=249,576.06
+Thread[Thread-0,5,main]94,337,000 inserts : 800 seconds : cum ips=117,918.30 : int ips=217,588.40
+Thread[Thread-0,5,main]96,662,000 inserts : 810 seconds : cum ips=119,329.62 : int ips=231,989.62
+Thread[Thread-0,5,main]98,783,000 inserts : 820 seconds : cum ips=120,458.11 : int ips=211,697.77
+Thread[Thread-0,5,main]100,553,000 inserts : 830 seconds : cum ips=121,142.65 : int ips=177,408.04
+Thread[Thread-0,5,main]102,333,000 inserts : 840 seconds : cum ips=121,816.44 : int ips=177,626.98
+Thread[Thread-0,5,main]104,698,000 inserts : 850 seconds : cum ips=123,161.66 : int ips=235,863.17
+Thread[Thread-0,5,main]105,685,000 inserts : 860 seconds : cum ips=122,875.39 : int ips=98,571.86
+Thread[Thread-0,5,main]106,315,000 inserts : 870 seconds : cum ips=122,199.74 : int ips=63,565.74
+Thread[Thread-0,5,main]108,323,000 inserts : 880 seconds : cum ips=123,085.23 : int ips=199,701.64
+Thread[Thread-0,5,main]109,931,000 inserts : 890 seconds : cum ips=123,506.46 : int ips=160,511.08
+Thread[Thread-0,5,main]112,383,000 inserts : 900 seconds : cum ips=124,867.23 : int ips=246,754.55
+Thread[Thread-0,5,main]114,221,000 inserts : 910 seconds : cum ips=125,510.69 : int ips=183,250.25
+Thread[Thread-0,5,main]115,619,000 inserts : 920 seconds : cum ips=125,662.72 : int ips=139,465.28
+Thread[Thread-0,5,main]116,455,000 inserts : 930 seconds : cum ips=125,207.10 : int ips=83,391.52
+Thread[Thread-0,5,main]116,862,000 inserts : 940 seconds : cum ips=124,319.43 : int ips=41,048.92
+Thread[Thread-0,5,main]118,056,000 inserts : 950 seconds : cum ips=124,263.72 : int ips=119,042.87
+Thread[Thread-0,5,main]119,117,000 inserts : 960 seconds : cum ips=124,078.01 : int ips=106,387.25
+Thread[Thread-0,5,main]120,104,000 inserts : 970 seconds : cum ips=123,814.86 : int ips=98,581.70
+Thread[Thread-0,5,main]120,328,000 inserts : 980 seconds : cum ips=122,776.41 : int ips=22,335.23
+Thread[Thread-0,5,main]120,812,000 inserts : 990 seconds : cum ips=122,023.45 : int ips=48,332.33
+Thread[Thread-0,5,main]121,370,000 inserts : 1,000 seconds : cum ips=121,369.88 : int ips=56,199.01
+Thread[Thread-0,5,main]121,807,000 inserts : 1,010 seconds : cum ips=120,589.41 : int ips=43,284.47
+Thread[Thread-0,5,main]123,347,000 inserts : 1,020 seconds : cum ips=120,927.25 : int ips=155,351.56
+Thread[Thread-0,5,main]124,801,000 inserts : 1,030 seconds : cum ips=121,162.14 : int ips=145,066.35
+Thread[Thread-0,5,main]126,330,000 inserts : 1,040 seconds : cum ips=121,464.61 : int ips=152,549.14
+Thread[Thread-0,5,main]127,600,000 inserts : 1,050 seconds : cum ips=121,515.36 : int ips=126,784.47
+Thread[Thread-0,5,main]128,937,000 inserts : 1,060 seconds : cum ips=121,628.12 : int ips=133,446.45
+Thread[Thread-0,5,main]130,600,000 inserts : 1,070 seconds : cum ips=122,052.65 : int ips=167,337.49
+Thread[Thread-0,5,main]130,600,000 inserts : 1,080 seconds : cum ips=120,921.22 : int ips=0.00
+Thread[Thread-0,5,main]131,639,000 inserts : 1,090 seconds : cum ips=120,760.97 : int ips=103,516.99
+Thread[Thread-0,5,main]131,639,000 inserts : 1,100 seconds : cum ips=119,662.03 : int ips=0.00
+Thread[Thread-0,5,main]132,490,000 inserts : 1,110 seconds : cum ips=119,359.39 : int ips=85,794.94
+Thread[Thread-0,5,main]132,768,000 inserts : 1,120 seconds : cum ips=118,535.24 : int ips=27,625.96
+Thread[Thread-0,5,main]133,794,000 inserts : 1,130 seconds : cum ips=118,392.45 : int ips=102,425.88
+Thread[Thread-0,5,main]134,551,000 inserts : 1,140 seconds : cum ips=118,020.67 : int ips=75,897.33
+Thread[Thread-0,5,main]135,832,000 inserts : 1,150 seconds : cum ips=118,108.52 : int ips=128,125.63
+Thread[Thread-0,5,main]136,948,000 inserts : 1,160 seconds : cum ips=118,051.50 : int ips=111,499.65
+Thread[Thread-0,5,main]137,906,000 inserts : 1,170 seconds : cum ips=117,860.32 : int ips=95,704.30
+Thread[Thread-0,5,main]139,013,000 inserts : 1,180 seconds : cum ips=117,798.64 : int ips=110,589.41
+Thread[Thread-0,5,main]140,241,000 inserts : 1,190 seconds : cum ips=117,845.52 : int ips=123,404.68
+Thread[Thread-0,5,main]140,588,000 inserts : 1,200 seconds : cum ips=117,150.52 : int ips=34,623.83
+Thread[Thread-0,5,main]141,481,000 inserts : 1,210 seconds : cum ips=116,917.94 : int ips=89,077.31
+Thread[Thread-0,5,main]142,385,000 inserts : 1,220 seconds : cum ips=116,699.45 : int ips=90,291.65
+Thread[Thread-0,5,main]143,655,000 inserts : 1,230 seconds : cum ips=116,788.22 : int ips=127,676.69
+Thread[Thread-0,5,main]143,954,000 inserts : 1,240 seconds : cum ips=116,091.75 : int ips=30,035.16
+Thread[Thread-0,5,main]144,539,000 inserts : 1,250 seconds : cum ips=115,626.20 : int ips=58,197.37
+Thread[Thread-0,5,main]145,083,000 inserts : 1,260 seconds : cum ips=115,139.21 : int ips=54,334.80
+Thread[Thread-0,5,main]145,625,000 inserts : 1,270 seconds : cum ips=114,657.95 : int ips=54,113.42
+Thread[Thread-0,5,main]146,587,000 inserts : 1,280 seconds : cum ips=114,512.33 : int ips=96,046.33
+Thread[Thread-0,5,main]147,733,000 inserts : 1,290 seconds : cum ips=114,515.67 : int ips=114,944.83
+Thread[Thread-0,5,main]149,024,000 inserts : 1,300 seconds : cum ips=114,630.85 : int ips=129,540.44
+Thread[Thread-0,5,main]149,887,000 inserts : 1,310 seconds : cum ips=114,412.58 : int ips=86,101.97
+Thread[Thread-0,5,main]150,644,000 inserts : 1,320 seconds : cum ips=114,116.63 : int ips=75,466.06
+Thread[Thread-0,5,main]150,816,000 inserts : 1,330 seconds : cum ips=113,387.22 : int ips=17,184.53
+Thread[Thread-0,5,main]151,614,000 inserts : 1,340 seconds : cum ips=113,143.51 : int ips=80,459.77
+Thread[Thread-0,5,main]152,049,000 inserts : 1,350 seconds : cum ips=112,620.55 : int ips=43,133.37
+Thread[Thread-0,5,main]152,514,000 inserts : 1,360 seconds : cum ips=112,141.82 : int ips=46,922.30
+Thread[Thread-0,5,main]153,355,000 inserts : 1,370 seconds : cum ips=111,936.08 : int ips=83,990.81
+Thread[Thread-0,5,main]153,849,000 inserts : 1,380 seconds : cum ips=111,478.72 : int ips=49,144.45
+Thread[Thread-0,5,main]154,739,000 inserts : 1,390 seconds : cum ips=111,315.65 : int ips=88,848.96
+Thread[Thread-0,5,main]155,643,000 inserts : 1,400 seconds : cum ips=111,172.94 : int ips=91,165.79
+Thread[Thread-0,5,main]156,201,000 inserts : 1,410 seconds : cum ips=110,779.36 : int ips=55,738.69
+Thread[Thread-0,5,main]156,690,000 inserts : 1,420 seconds : cum ips=110,340.87 : int ips=48,729.45
+Thread[Thread-0,5,main]157,269,000 inserts : 1,430 seconds : cum ips=109,973.32 : int ips=57,836.38
+Thread[Thread-0,5,main]157,601,000 inserts : 1,440 seconds : cum ips=109,440.81 : int ips=33,226.58
+Thread[Thread-0,5,main]158,159,000 inserts : 1,450 seconds : cum ips=109,067.95 : int ips=55,583.23
+Thread[Thread-0,5,main]158,405,000 inserts : 1,460 seconds : cum ips=108,496.06 : int ips=24,820.91
+Thread[Thread-0,5,main]159,523,000 inserts : 1,470 seconds : cum ips=108,517.20 : int ips=111,599.12
+Thread[Thread-0,5,main]160,000,000 inserts : 1,475 seconds : cum ips=108,428.19 : int ips=85,087.41
+Aug 21, 2019 1:08:31 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:2, serverValue:6}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:08:31 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:6, serverValue:10}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:08:31 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:8, serverValue:8}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:08:31 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:7, serverValue:9}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:08:31 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:5, serverValue:11}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:08:31 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:3, serverValue:7}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:08:31 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:9, serverValue:12}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:08:31 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:4, serverValue:13}] to mongodb:27017 because the pool has been closed.
+Thread[main,5,main]Done!
+
+Wed Aug 21 13:08:31 IDT 2019 | sysbench loader duration = 00:00:24:36
+Do query at Wed Aug 21 13:08:31 IDT 2019
+Thread[main,5,main]Application Parameters
+Thread[main,5,main]-------------------------------------------------------------------------------------------------
+Thread[main,5,main]  collections              = 16
+Thread[main,5,main]  database name            = sbtest
+Thread[main,5,main]  writer threads           = 64
+Thread[main,5,main]  documents per collection = 10,000,000
+Thread[main,5,main]  feedback seconds         = 10
+Thread[main,5,main]  log file                 = mongoSysbenchExecute-default-16-10000000-8-64.txt.tsv
+Thread[main,5,main]  auto commit              = Y
+Thread[main,5,main]  run seconds              = 600
+Thread[main,5,main]  oltp range size          = 100
+Thread[main,5,main]  oltp point selects       = 10
+Thread[main,5,main]  oltp simple ranges       = 1
+Thread[main,5,main]  oltp sum ranges          = 1
+Thread[main,5,main]  oltp order ranges        = 1
+Thread[main,5,main]  oltp distinct ranges     = 1
+Thread[main,5,main]  oltp index updates       = 1
+Thread[main,5,main]  oltp non index updates   = 1
+Thread[main,5,main]  oltp inserts             = 1
+Thread[main,5,main]  write concern            = SAFE
+Thread[main,5,main]  maximum tps (global)     = 999999
+Thread[main,5,main]  maximum tps (per thread) = 15625
+Thread[main,5,main]  Server:Port = mongodb:27017
+Thread[main,5,main]  seed                     = 1566380633
+Thread[main,5,main]  userName                 = none
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[mongodb:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+Thread[main,5,main]mongoOptions | MongoOptions{description='null', connectionsPerHost=100, threadsAllowedToBlockForConnectionMultiplier=5, maxWaitTime=120000, connectTimeout=10000, socketTimeout=0, socketKeepAlive=true, readPreference=primary, dbDecoderFactory=com.mongodb.DefaultDBDecoder$1@32464a14, dbEncoderFactory=com.mongodb.DefaultDBEncoder$1@4e4aea35, safe=false, w=0, wtimeout=0, fsync=false, j=false, socketFactory=javax.net.DefaultSocketFactory@1442d7b5, cursorFinalizerEnabled=false, writeConcern=WriteConcern{w=null, wTimeout=null ms, fsync=null, journal=null, alwaysUseMBeans=false, requiredReplicaSetName=null}
+Thread[main,5,main]mongoWriteConcern | WriteConcern{w=null, wTimeout=null ms, fsync=null, journal=null
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster description not yet available. Waiting for 30000 ms before timing out
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:1, serverValue:14}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=mongodb:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 12]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1464824}
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:2, serverValue:15}] to mongodb:27017
+Thread[main,5,main]  index technology         = mongo
+Thread[main,5,main]-------------------------------------------------------------------------------------------------
+Thread[Thread-0,5,main]Writer thread 0 : started
+Thread[Thread-1,5,main]Writer thread 1 : started
+Thread[Thread-2,5,main]Writer thread 2 : started
+Thread[Thread-3,5,main]Writer thread 3 : started
+Thread[Thread-4,5,main]Writer thread 4 : started
+Thread[Thread-5,5,main]Writer thread 5 : started
+Thread[Thread-6,5,main]Writer thread 6 : started
+Thread[Thread-7,5,main]Writer thread 7 : started
+Thread[Thread-8,5,main]Writer thread 8 : started
+Thread[Thread-10,5,main]Writer thread 10 : started
+Thread[Thread-9,5,main]Writer thread 9 : started
+Thread[Thread-11,5,main]Writer thread 11 : started
+Thread[Thread-12,5,main]Writer thread 12 : started
+Thread[Thread-13,5,main]Writer thread 13 : started
+Thread[Thread-14,5,main]Writer thread 14 : started
+Thread[Thread-15,5,main]Writer thread 15 : started
+Thread[Thread-16,5,main]Writer thread 16 : started
+Thread[Thread-17,5,main]Writer thread 17 : started
+Thread[Thread-18,5,main]Writer thread 18 : started
+Thread[Thread-19,5,main]Writer thread 19 : started
+Thread[Thread-20,5,main]Writer thread 20 : started
+Thread[Thread-21,5,main]Writer thread 21 : started
+Thread[Thread-23,5,main]Writer thread 23 : started
+Thread[Thread-24,5,main]Writer thread 24 : started
+Thread[Thread-25,5,main]Writer thread 25 : started
+Thread[Thread-26,5,main]Writer thread 26 : started
+Thread[Thread-27,5,main]Writer thread 27 : started
+Thread[Thread-28,5,main]Writer thread 28 : started
+Thread[Thread-29,5,main]Writer thread 29 : started
+Thread[Thread-32,5,main]Writer thread 32 : started
+Thread[Thread-22,5,main]Writer thread 22 : started
+Thread[Thread-40,5,main]Writer thread 40 : started
+Thread[Thread-37,5,main]Writer thread 37 : started
+Thread[Thread-31,5,main]Writer thread 31 : started
+Thread[Thread-38,5,main]Writer thread 38 : started
+Thread[Thread-30,5,main]Writer thread 30 : started
+Thread[Thread-39,5,main]Writer thread 39 : started
+Thread[Thread-36,5,main]Writer thread 36 : started
+Thread[Thread-35,5,main]Writer thread 35 : started
+Thread[Thread-34,5,main]Writer thread 34 : started
+Thread[Thread-33,5,main]Writer thread 33 : started
+Thread[Thread-44,5,main]Writer thread 44 : started
+Thread[Thread-43,5,main]Writer thread 43 : started
+Thread[Thread-42,5,main]Writer thread 42 : started
+Thread[Thread-41,5,main]Writer thread 41 : started
+Thread[Thread-46,5,main]Writer thread 46 : started
+Thread[Thread-45,5,main]Writer thread 45 : started
+Thread[Thread-47,5,main]Writer thread 47 : started
+Thread[Thread-48,5,main]Writer thread 48 : started
+Thread[Thread-49,5,main]Writer thread 49 : started
+Thread[Thread-50,5,main]Writer thread 50 : started
+Thread[Thread-51,5,main]Writer thread 51 : started
+Thread[Thread-52,5,main]Writer thread 52 : started
+Thread[Thread-53,5,main]Writer thread 53 : started
+Thread[Thread-54,5,main]Writer thread 54 : started
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:3, serverValue:16}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:6, serverValue:17}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:15, serverValue:28}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:11, serverValue:23}] to mongodb:27017
+Thread[Thread-55,5,main]Writer thread 55 : started
+Thread[Thread-56,5,main]Writer thread 56 : started
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:10, serverValue:25}] to mongodb:27017
+Thread[Thread-57,5,main]Writer thread 57 : started
+Thread[Thread-58,5,main]Writer thread 58 : started
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:17, serverValue:30}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:8, serverValue:21}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:19, serverValue:31}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:21, serverValue:33}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:4, serverValue:22}] to mongodb:27017
+Thread[Thread-59,5,main]Writer thread 59 : started
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:9, serverValue:20}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:13, serverValue:26}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:7, serverValue:19}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:12, serverValue:24}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:20, serverValue:32}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:16, serverValue:29}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:5, serverValue:18}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:18, serverValue:34}] to mongodb:27017
+Thread[Thread-60,5,main]Writer thread 60 : started
+Thread[Thread-61,5,main]Writer thread 61 : started
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:23, serverValue:37}] to mongodb:27017
+Thread[Thread-62,5,main]Writer thread 62 : started
+Thread[Thread-63,5,main]Writer thread 63 : started
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:14, serverValue:27}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:24, serverValue:36}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:26, serverValue:39}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:25, serverValue:38}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:22, serverValue:35}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:27, serverValue:40}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:32, serverValue:46}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:36, serverValue:49}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:37, serverValue:50}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:33, serverValue:45}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:30, serverValue:43}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:44, serverValue:56}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:41, serverValue:54}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:63, serverValue:75}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:40, serverValue:53}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:35, serverValue:48}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:31, serverValue:44}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:38, serverValue:51}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:47, serverValue:60}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:46, serverValue:59}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:58, serverValue:71}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:42, serverValue:55}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:53, serverValue:65}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:65, serverValue:77}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:39, serverValue:52}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:59, serverValue:72}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:55, serverValue:67}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:29, serverValue:42}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:28, serverValue:41}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:52, serverValue:64}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:43, serverValue:57}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:50, serverValue:68}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:49, serverValue:62}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:57, serverValue:69}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:60, serverValue:73}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:48, serverValue:61}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:45, serverValue:58}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:62, serverValue:76}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:61, serverValue:74}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:64, serverValue:78}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:51, serverValue:63}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:54, serverValue:66}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:56, serverValue:70}] to mongodb:27017
+Aug 21, 2019 1:08:32 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:34, serverValue:47}] to mongodb:27017
+Thread[Thread-64,5,main]10 seconds : cum tps=28.68 : int tps=28.68 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]20 seconds : cum tps=28.96 : int tps=29.24 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]30 seconds : cum tps=32.69 : int tps=40.14 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]40 seconds : cum tps=35.87 : int tps=45.45 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]50 seconds : cum tps=38.55 : int tps=49.25 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]60 seconds : cum tps=40.06 : int tps=47.64 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]70 seconds : cum tps=42.16 : int tps=54.75 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]80 seconds : cum tps=44.13 : int tps=57.93 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]90 seconds : cum tps=46.11 : int tps=61.93 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]100 seconds : cum tps=47.94 : int tps=64.57 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]110 seconds : cum tps=48.50 : int tps=54.15 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]120 seconds : cum tps=45.65 : int tps=14.28 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]130 seconds : cum tps=43.19 : int tps=13.68 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]140 seconds : cum tps=41.43 : int tps=18.58 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]150 seconds : cum tps=41.68 : int tps=45.15 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]160 seconds : cum tps=39.97 : int tps=14.38 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]170 seconds : cum tps=40.69 : int tps=52.14 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]180 seconds : cum tps=41.80 : int tps=60.73 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]190 seconds : cum tps=43.36 : int tps=71.63 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]200 seconds : cum tps=44.83 : int tps=72.72 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]210 seconds : cum tps=46.17 : int tps=73.02 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]220 seconds : cum tps=47.40 : int tps=73.10 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]230 seconds : cum tps=48.61 : int tps=75.21 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]240 seconds : cum tps=49.65 : int tps=73.72 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]250 seconds : cum tps=50.68 : int tps=75.22 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]260 seconds : cum tps=51.71 : int tps=77.41 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]270 seconds : cum tps=52.61 : int tps=76.02 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]280 seconds : cum tps=53.52 : int tps=78.40 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]290 seconds : cum tps=54.40 : int tps=79.01 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]300 seconds : cum tps=55.21 : int tps=78.71 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]310 seconds : cum tps=55.91 : int tps=76.92 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]320 seconds : cum tps=56.53 : int tps=75.82 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]330 seconds : cum tps=57.18 : int tps=77.85 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]340 seconds : cum tps=56.67 : int tps=39.81 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]350 seconds : cum tps=55.82 : int tps=26.87 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]360 seconds : cum tps=56.39 : int tps=76.23 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]370 seconds : cum tps=57.02 : int tps=79.70 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]380 seconds : cum tps=57.58 : int tps=78.51 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]390 seconds : cum tps=58.15 : int tps=79.81 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]400 seconds : cum tps=58.61 : int tps=76.77 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]410 seconds : cum tps=58.27 : int tps=44.35 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]420 seconds : cum tps=58.29 : int tps=59.22 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]430 seconds : cum tps=58.61 : int tps=72.23 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]440 seconds : cum tps=58.88 : int tps=70.52 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]450 seconds : cum tps=59.14 : int tps=70.50 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]460 seconds : cum tps=58.94 : int tps=49.87 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]470 seconds : cum tps=59.12 : int tps=67.42 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]480 seconds : cum tps=59.21 : int tps=63.52 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]490 seconds : cum tps=59.42 : int tps=69.34 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]500 seconds : cum tps=59.53 : int tps=65.13 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]510 seconds : cum tps=59.24 : int tps=44.80 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]520 seconds : cum tps=59.12 : int tps=53.07 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]530 seconds : cum tps=59.16 : int tps=61.04 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]540 seconds : cum tps=59.26 : int tps=64.43 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]550 seconds : cum tps=59.44 : int tps=69.02 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]560 seconds : cum tps=59.58 : int tps=67.63 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]570 seconds : cum tps=59.64 : int tps=62.84 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]580 seconds : cum tps=59.64 : int tps=59.54 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]590 seconds : cum tps=59.66 : int tps=61.03 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[Thread-64,5,main]600 seconds : cum tps=59.79 : int tps=67.33 : cum ips=0.00 : int ips=0.00 : writers=64
+Thread[main,5,main]Dropping collections
+Aug 21, 2019 1:18:35 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:62, serverValue:76}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:18, serverValue:34}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:5, serverValue:18}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:64, serverValue:78}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:30, serverValue:43}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:23, serverValue:37}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:22, serverValue:35}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:7, serverValue:19}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:27, serverValue:40}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:32, serverValue:46}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:55, serverValue:67}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:49, serverValue:62}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:58, serverValue:71}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:39, serverValue:52}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:16, serverValue:29}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:60, serverValue:73}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:59, serverValue:72}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:14, serverValue:27}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:36, serverValue:49}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:2, serverValue:15}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:33, serverValue:45}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:54, serverValue:66}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:34, serverValue:47}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:37, serverValue:50}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:21, serverValue:33}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:53, serverValue:65}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:13, serverValue:26}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:35, serverValue:48}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:4, serverValue:22}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:61, serverValue:74}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:19, serverValue:31}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:8, serverValue:21}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:43, serverValue:57}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:20, serverValue:32}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:3, serverValue:16}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:46, serverValue:59}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:26, serverValue:39}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:11, serverValue:23}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:65, serverValue:77}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:57, serverValue:69}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:48, serverValue:61}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:56, serverValue:70}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:38, serverValue:51}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:6, serverValue:17}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:52, serverValue:64}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:25, serverValue:38}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:12, serverValue:24}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:15, serverValue:28}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:51, serverValue:63}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:10, serverValue:25}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:50, serverValue:68}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:40, serverValue:53}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:45, serverValue:58}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:28, serverValue:41}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:31, serverValue:44}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:24, serverValue:36}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:9, serverValue:20}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:44, serverValue:56}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:47, serverValue:60}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:42, serverValue:55}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:29, serverValue:42}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:63, serverValue:75}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:41, serverValue:54}] to mongodb:27017 because the pool has been closed.
+Aug 21, 2019 1:18:36 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:17, serverValue:30}] to mongodb:27017 because the pool has been closed.
+Thread[main,5,main]Done!
+
+Wed Aug 21 13:18:37 IDT 2019 | sysbench benchmark duration = 00:00:10:06
+]0;sf@perflab2: ~/sysbench-mongodbsf@perflab2:~/sysbench-mongodb [master]
+$ exit
+
+Script done on 2019-08-21 13:23:59+0300
