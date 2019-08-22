@@ -14,6 +14,19 @@ Requirements
 * This example assumes that you already have a MongoDB or Percona Server for MongoDB server running on the same machine as the Sysbench client application.
 * You can connect a different server or port by editing the config.bash script.
 
+Scadafence Notes
+--------------------
+
+To install Java on your Ubuntu system use:
+
+	sudo apt-get install default-jre default-jdk
+	
+This installs Java 11.  To get the latest (as of this writing) Java driver, use::
+
+	wget https://oss.sonatype.org/content/repositories/releases/org/mongodb/mongo-java-driver/3.11.0/mongo-java-driver-3.11.0.jar
+	export CLASSPATH=$PWD/mongo-java-driver-3.11.0jar:$CLASSPATH
+
+The 3.11.0 driver worked with both MongoDB 3.0 and MongoDB 4.0. You should probably get whatever driver is current from the oss.sonatype.org site.
 
 Running the benchmark
 =====================
@@ -41,3 +54,13 @@ If you want to have multiple config files you can simply copy config.bash and sp
 ./run.simple.bash my_custom_config.bash
 
 ```
+
+Scadafence Notes
+--------------------
+
+See the file `sf-config.bash` which has the parameters used when running the benchmark locally. Use `diff` or `meld` to compare it with the default.
+
+Last Updated
+---------------
+Thu Aug 22 10:59:12 IDT 2019
+
